@@ -1,0 +1,58 @@
+---------------------Consigna-----------------------
+Código 1:
+#include <stdio.h> #include <stdlib.h> #define N 50
+int main() {
+int arreglo1[N]; return 0;
+}
+
+Código 2:
+#include <stdio.h> #include <stdlib.h>
+int main() { int n;
+scanf("%d",&n);
+/* el usuario ingresa 50 */ 
+int arreglo3[n];
+return 0;
+}
+
+Código 3:
+#include <stdio.h> #include <stdlib.h> #define N 50
+int main() {
+int * arreglo2 = (int *) malloc (N*sizeof(int));
+return 0;
+}
+Indique para cada arreglo definido:
+a. ¿Qué tipo de arreglo se está utilizando (estático/dinámico/de longitud variable)?
+b. ¿En qué momento se determina cuánta memoria se va a reservar (compilación/ejecución)?
+c. ¿Cuál es el límite de tamaño de cada tipo de arreglo?
+d. ¿Se puede cambiar el tamaño en ejecución?
+e. ¿Se puede liberar la memoria reservada?
+f. ¿El nombre del arreglo puede apuntar a otra dirección?
+g. ¿Todos los códigos compilan de acuerdo a ANSI C90?
+
+---------------------Respuestas-----------------------
+Código 1:
+a. Estático
+b. Compilación
+c. El límite de tamaño es el tamaño definido por la constante N (50 en este caso).
+d. No se puede cambiar el tamaño en ejecución.
+e. No es necesario liberar la memoria reservada ya que es un arreglo estático y su memoria se libera automáticamente al finalizar el programa.
+f. No, el nombre del arreglo no puede apuntar a otra dirección.
+g. Sí, el código compila de acuerdo a ANSI C90.
+
+Código 2:
+a. De longitud variable (Variable Length Array, VLA)
+b. Ejecución
+c. El límite de tamaño está determinado por la cantidad de memoria disponible en tiempo de ejecución.
+d. No se puede cambiar el tamaño en ejecución.
+e. No es necesario liberar la memoria reservada ya que es un arreglo de longitud variable y su memoria se libera automáticamente al finalizar el programa.
+f. No, el nombre del arreglo no puede apuntar a otra dirección.
+g. No, el código no compila de acuerdo a ANSI C90 porque las VLAs no están soportadas en C90 (fueron introducidas en C99).
+
+Código 3:
+a. Dinámico
+b. Ejecución
+c. El límite de tamaño está determinado por la cantidad de memoria disponible en tiempo de ejecución.
+d. Sí, se puede cambiar el tamaño en ejecución usando realloc.
+e. Sí, se puede liberar la memoria reservada usando free.
+f. Sí, el nombre del arreglo (un puntero en este caso) puede apuntar a otra dirección.
+g. Sí, el código compila de acuerdo a ANSI C90.

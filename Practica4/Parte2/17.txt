@@ -1,0 +1,17 @@
+Mi amigo el chat opina lo siguiente:
+El código que proporcionas crea un "tensor" tridimensional de tamaño NxNxN utilizando memoria dinámica. La función crearTensor devuelve un puntero triple (int***) que apunta a una estructura tridimensional.
+
+La variable a necesita ser de tipo int*** porque es un puntero que apunta a un puntero que apunta a otro puntero, lo que representa una estructura tridimensional. En este caso, a apunta a una matriz de punteros int**, cada uno de los cuales apunta a una matriz de punteros int*, y cada uno de estos punteros int* apunta a un arreglo de enteros int.
+
+El diagrama de la estructura de memoria sería algo como esto:
+
+
+e -> |---|   a -> |---|---|---|...|---|
+         |          |   |   |     |
+         |--------> |---|---|---|...|---|
+         |          |   |   |     |
+         |--------> |---|---|---|...|---|
+         .          .   .   .
+         .          .   .   .
+         .          .   .   .
+Después de llamar al módulo crearTensor, la variable e apunta a la estructura tridimensional que ha sido creada y asignada a la variable a. Es decir, e apunta a la misma dirección de memoria que a.

@@ -1,0 +1,5 @@
+- No podrás visualizar los números en el archivo binario utilizando un editor de texto porque los números se almacenan como binarios en el archivo, lo que significa que los datos se escriben directamente en su representación de bits. Los editores de texto no son capaces de interpretar estos datos como números.
+
+- El archivo de texto será más grande que el archivo binario porque cada número se representa como un carácter ASCII en el archivo de texto, lo cual ocupa más espacio que la representación binaria de los números en el archivo binario.
+
+- Los archivos de texto son mejores cuando se necesita legibilidad y la posibilidad de editar los datos con herramientas simples como los editores de texto. Los archivos binarios son útiles cuando se necesita almacenar una gran cantidad de datos de manera eficiente en términos de espacio. También son más rápidos de leer y escribir, lo que puede ser importante en aplicaciones de alto rendimiento.
